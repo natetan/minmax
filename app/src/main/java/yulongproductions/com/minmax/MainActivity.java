@@ -25,7 +25,7 @@ public class MainActivity extends ActionBarActivity {
 
         minMax = (Button) findViewById(R.id.minMaxButton);
         display = (TextView) findViewById(R.id.display);
-        display.setText((int) Math.random() * RANGE);
+        display.setText((int) (Math.random() * RANGE) + "");
         final int displayNum = Integer.parseInt(display.getText().toString());
         mNums = new Nums();
 
