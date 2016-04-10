@@ -29,4 +29,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="64dp"
         android:textColor="@android:color/black"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/refreshIcon"
+        android:layout_marginBottom="48dp"
+        android:src="@android:drawable/ic_menu_rotate"
+        android:layout_alignBottom="@+id/display"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>
