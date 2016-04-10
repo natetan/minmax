@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,6 +14,7 @@ import android.widget.Toast;
 public class MainActivity extends ActionBarActivity {
     private Button minMax;
     private TextView display;
+    private ImageView refreshIcon;
     private Nums mNums;
 
     public static final int RANGE = 1000;
@@ -25,6 +27,7 @@ public class MainActivity extends ActionBarActivity {
 
         minMax = (Button) findViewById(R.id.minMaxButton);
         display = (TextView) findViewById(R.id.display);
+        refreshIcon = (ImageView) findViewById(R.id.refreshIcon);
         display.setText((int) (Math.random() * RANGE) + "");
         final int displayNum = Integer.parseInt(display.getText().toString());
         mNums = new Nums();
@@ -43,6 +46,13 @@ public class MainActivity extends ActionBarActivity {
                 String message = "The max is " + mNums.getMax(displayNum);
                 Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
                 return true;
+            }
+        });
+
+        refreshIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
             }
         });
 
