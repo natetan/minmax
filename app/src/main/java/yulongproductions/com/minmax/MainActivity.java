@@ -52,7 +52,7 @@ public class MainActivity extends ActionBarActivity {
         refreshIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                display.setText((int) (Math.random() * RANGE) + "");
             }
         });
 
